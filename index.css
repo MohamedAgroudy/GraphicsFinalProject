@@ -1,0 +1,85 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+canvas {
+	display: block;
+	margin:0 auto;
+}
+
+div {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@media screen and (max-width: 760px) {
+	.controller {
+		position: fixed;
+		bottom: 40px;
+		left: 50%;
+		transform: translate(-50%,0);
+		width: 140px;
+		height: 140px;
+	}
+	.direction {
+		position: absolute;
+		border-radius: 12px;
+		background: rgba(255,255,255,0.7);
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.triangle {
+		width: 0;
+		height: 0;
+		border: 15px solid transparent;
+	}
+	.top {
+		top: 5%;
+		left: 50%;
+		transform: translate(-50%,0);
+	}
+	.left {
+		top: 50%;
+		left: 5%;
+		transform: translate(0,-50%);
+	}
+	.right {
+		top: 50%;
+		right: 5%;
+		transform: translate(0,-50%);
+	}
+	.bottom {
+		bottom: 5%;
+		left: 50%;
+		transform: translate(-50%,0);
+	}
+	.top > .triangle {
+		border-bottom: 20px solid grey;
+	}
+	.bottom > .triangle {
+		border-top: 20px solid grey;
+	}
+	.left > .triangle {
+		border-right: 20px solid grey;
+	}
+	.right > .triangle {
+		border-left: 20px solid grey;
+	}
+}
+
+#score {
+	position: fixed;
+	left: 80px;
+	top: 0;
+	color: black;
+	font-size: 24px;
+	font-weight: 600;
+	padding: 10px 20px;
+}
